@@ -25,5 +25,4 @@ CMD ["/usr/bin/supervisord"]
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
-CMD ["php7.0-fpm"]
+CMD service php7.0-fpm start && nginx -g "daemon off;"
